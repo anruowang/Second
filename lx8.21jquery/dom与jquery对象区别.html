@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="scripts/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			// var a=$("#hello");
+			// alert(a.innerHTML);
+		
+			// var a=document.getElementById("hello");
+			// alert(a.innerHTML);
+
+			//将jquery对象转为dom对象 方案一
+			// var a=$("#hello");//$()取出来的是一个jquery对象数组
+			// var ele=a[0];
+			// alert(ele.innerHTML);//以下标的方式可以取出 dom对象
+
+			//方案二
+			var a=$("#hello");
+			var ele=a.get(0);
+			alert(ele.innerHTML);
+
+			//如何将一个dom对象转为jquery对象 =》 $(dom对象)
+			var h=document.getElementById("hello");
+			var result=$(h);//变为一个jquery对象
+			alert(result.html());
+		})
+	</script>
+</head>
+<body>
+	<p id="hello">hello</p>
+</body>
+</html>
