@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-1.9.1.js"></script>
+	<script type="text/javascript" src="dzy.js"></script>
+	<script type="text/javascript">
+	$(function(){
+		$.sayHello();
+		$.sayHello("zy");
+
+	// try{
+	// 	var a=33;
+	// 	a.test();
+	// }catch(ex){
+	// 	$.log(ex);
+	// }
+	
+
+	$.log($.ltrim(" abc").length);
+	$.log($.rtrim("abc ").length);
+	$.log($.trim(" abc ").length);
+
+	//$("p")的到的是一个jquery对象
+	$("p").setColor();
+
+	$("a").showLink({"color":"green"});
+	// $("p").myshow().myshow({"color":"green"});
+	// $().myTable({"color":"green"}).myTable();
+});
+</script>
+</head>
+<body>
+<p>hello</p>
+<p>world</p>
+<p>zy</p>
+<p>yc</p>
+<a href="http://www.baidu.com" title="baidu"></a><br/>
+<a href="http://www.sina.com" title="sina"></a>
+</body>
+</html>
