@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		var dfd=$.Deferred();
+
+		setTimeout(function(){
+			alert('a');
+			dfd.resolve();
+		},1000);
+
+		dfd.done(function(){
+			alert("b");
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
