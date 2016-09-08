@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		function a(){
+			alert("a");
+		}
+		function b(){
+			alert("b");
+		}
+		function c(){
+			alert("c");
+		}
+		var cb=$.Callbacks();
+		alert(cb);
+
+		cb.add(a);
+		cb.add([b,c]);//Callbacks->list ->[a,b,c]
+
+		cb.fire();
+
+		$().hover(function(){
+
+		},function(){
+
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

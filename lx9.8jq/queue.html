@@ -6,14 +6,10 @@
 	<script type="text/javascript" src="jquery-2.0.3.js"></script>
 </head>
 <body>
-	<div id="div1"></div>
+	<div id="div1" style="position: absolute;">hello</div>
 	<script type="text/javascript">
-		$("#div1").data("name","hello")//内存级别，存到内存里面去了;
-		alert($("#div1").data("name"));
-
-		$.data($("#div1"),"age",30);
-
-		alert($.data($("#div1"),"age"));
+		// queue:队列，是一个先进先出的数据结构，主要用于动画
+		$("#div1").animate({left:100}).animate({top:100}).animate({width:100});
 	</script>
 </body>
 </html>

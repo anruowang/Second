@@ -9,12 +9,13 @@
 
 		setTimeout(function(){
 			alert('a');
-			dfd.resolve();
+			dfd.resolve();//有延时也先运行
 		},1000);
 
-		dfd.done(function(){
+		dfd.done(function(){//上面运行完才开始运行
 			alert("b");
 		})
+		//一般是内部函数用，外部使用不高
 	</script>
 </head>
 <body>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		alert($().jquery);//2.0.3
+		alert($().constructor);
+
+		//申明对象的方法不一样，则constructor值不一样
+		function Person(n){
+			this.name=n;
+		}
+
+		var p=new Person("张三");
+
+		alert(p.constructor);
+
+		var p2={"name":"张三"};
+		alert(p2.constructor);
+
+		var a=$();
+		alert(a + " "+a.constructor);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
