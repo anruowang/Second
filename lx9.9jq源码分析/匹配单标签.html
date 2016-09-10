@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		//<p></p>
+		//<p>
+		//</p>
+		rsingleTag = /^<(\w+)\s*\/?>(?:<\/\1>|)$/;
+		var a=rsingleTag.exec("<li></li>");
+		alert(a);
+		var b=rsingleTag.exec("<hr/>");
+		alert(b);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		//each可以循环数组
+		$.each([1,2,3],function(index,item){
+			document.write(index+":"+item+"<br/>");
+			if(index==0){
+				return false;//中断循环，只运行一次
+			}
+		});
+
+		//each可以循环对象属性
+		$.each({"name":"zy","age":20},function(index,item){
+			document.write(index+":"+item+"<br/>");
+			if(index=="name"){
+				return false;//中断循环，只运行一次
+			}
+		})
+
+		alert(undefined===false);
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

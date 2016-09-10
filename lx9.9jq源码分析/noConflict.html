@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript">
+		var $=123;
+	</script>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		//正常使用jquery
+		// $("li");
+		// 程序运行到这里时，$是jquery对象
+		// var $=12;
+		
+
+		var _jq=$.noConflict();//a jquery对象  取出标准的jquery对象的存到一个临时变量中
+		var $="abc";//这里$已经被别的框架引用了，所以后面的不能再调jquery
+
+		//后面要调时，用这个临时变量
+		_jq(function(){
+			alert("abc");
+		})
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

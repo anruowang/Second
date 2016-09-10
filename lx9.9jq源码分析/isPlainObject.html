@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		var p={name:"zy"};
+		for(var key in p){
+			document.write(key+" "+p[key]);//什么都没有
+
+		}
+		document.write(p.hasOwnProperty("name"));
+
+		var s={};
+		document.write( $.isEmptyObject(s) );
+
+		//一个对象通过循环或hasOwnProperty只能访问它自身定义的那些属性，而不能访问它继承过来的或prototype
+	</script>
+</head>
+<body>
+	
+</body>
+</html>
