@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="lib.js"></script>
+	<script type="text/javascript">
+		// yc.ajaxRequest("http://192.168.1.218:8080/test2/hello?op=xml",{"xmlResponseListener":show2});
+		// //直接使用借调函数中的参数
+		// function show1(xml){
+		// 	alert(xml.getElementsByTagName("person")[0].getElementsByTagName("name")[0].innerHTML);//zy
+		// }
+		// function show2(){
+		// 	alert(this.responseXML.getElementsByTagName("person")[0].getElementsByTagName("name")[0].innerHTML);//zy
+		// }
+		
+
+		yc.ajaxRequest("http://192.168.1.218:8080/test2/hello?op=json",{"jsonResponseListener":show1});
+		//直接使用借调函数中的参数
+		function show1(json){
+			alert(json.name+" "+json.age);//zy 20
+		}
+		function show2(){
+			alert( (eval( "(" + this.responseText + " )" )).name );//zy
+		}
+
+
+
+		// yc.ajaxRequest("http://192.168.1.218:8080/test2/hello?op=js",{"jsResponseListener":show1});
+		// function show1(js){
+		// 	alert(js);
+		// 	eval(js);
+		// }
+
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

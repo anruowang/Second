@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-2.0.3.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			alert("a");
+		});
+	// 	jQuery = function( selector, context ) {//61
+	// 	// The jQuery object is actually just the init constructor 'enhanced'
+	// 	return new jQuery.fn.init( selector, context, rootjQuery );//参考283
+	// },
+	// 	selector->function(){alert("a");}
+	// 	init(function(){alert("a");});
+	// 	else if ( jQuery.isFunction( selector ) ) {
+	//		return rootjQuery.ready( selector );
+	//	}
+	//	rootjQuery是怎么来的  rootjQuery=jQuery(document)
+	//	rootjQuery.ready(selector) ->jquery(document)  .ready(function(){})
+
+		$(document).ready(function(){
+			alert("b");
+		});
+		$(document).on("ready",function(){
+			alert("c");
+		});
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

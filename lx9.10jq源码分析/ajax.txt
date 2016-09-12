@@ -1,0 +1,4 @@
+一个标准的ajax操作分几步？
+a.创建异步请求 xhr ie->ActiveXObject()   ff->XmlHttpRequest
+b. open("GET/POST",url,true)准备
+c.xhr.onreadystatechange 回调函数
