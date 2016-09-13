@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src=""></script>
+	<script type="text/javascript">
+		$(function(){
+			$("#bid").click(function(){
+				verify();
+			})
+			function verify(){
+				if($('#username').val()==''){
+					var name=prompt("用户名不能为空","");
+					if(name!=null&&name!=' '){
+						$.('#username').val(name);
+						return;
+					}else if($('pwd').val()==''){
+						var name=prompt("用户名不能为空","");
+						if(name!=null&&name!=' '){
+						$.('#username').val(name);
+						return;
+						}
+					}
+				}
+			}
+		})
+	</script>
+</head>
+<body>
+	<!-- 用jquery实现下面的登录表单验证
+	1.用户名为空时，提示用户名不能为空
+	2.密码
+	3.回车可以验证表单提交
+	4.使用post表单提交  提示显示在prompt中 -->
+<form method="post">
+	<tr>
+		<td>用户名</td>
+		<td><input type="text" name="username" /></td>
+	</tr>
+	<tr>
+		<td>密码：</td>
+		<td><input type="password" name="pwd" /></td>
+	</tr>
+	<input type="button" id="bid" value="提交" />
+</form>
+</body>
+</html>

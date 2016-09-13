@@ -1,0 +1,71 @@
+1. 请指出eq(), get(), []的区别?
+	eq返回的是一个jquery对象，get返回的是一个html 对象数组
+	举个例子：
+	<p style="color:yellow">绯雨</p>
+	使用eq来获得第一个p标签的color值：
+	$("p").eq(0).css("color")  //因为eq(num)返回的是个jq对象，所以可	以用jq的方法css
+	使用get来获得第一个p标签的color值：
+	$("p").get(0).style.color  //因为get(num)返回的是个html对象，所	以要使用传统的HTML对象方法，jq对象此时就没用了。
+	当然，你也可以get(num)后把对象转为jq的对象再进行操作：
+	$($("p").get(0)).css("color")
+
+2. 介绍一下jquery UI. 
+	jQuery ui 是基于 jquery 基础类库开发的开源的 javascript 网页UI代码组件库，包含底层用户交互、动画、特效和可更换主题的可视控件，我们可以直接用它来构建具有很好交互性的web应用程序。
+	jquery ui主要包含三部分：
+	1.交互组件，主要包含Draggable,Droppable（拖拽组件）,Resizable（可调整大小组件）,Selectable（选择组件）和Sortable（排序组件）等。这些都是要与鼠标打交道的，所以属于交互组件。
+	2.微件，微件是组成页面的一个个小组件包括Accordion,AutoComplete,ColorPicker,Dialog,Slider,Tabs,DatePicker,Magnifier,ProgressBar,Spinner等。
+	3.效果库，jquery ui 的效果库提供了更加炫酷的效果，是你的动画效果与众不同更加惊艳，效果库在effect目录
+
+3. 您知道哪些针对jquery的优化方法吗?
+	1，总是从ID选择器开始继承
+	2，在class前使用tag(标签名)
+	3，将jQuery对象缓存起来
+	4，对直接的DOM操作进行限制
+	5，冒泡
+		除非在特殊情况下, 否则每一个js事件(例如:click, mouseover等.)都会冒泡到父级节点。
+		当我们需要给多个元素调用同个函数时这点会很有用。
+		代替这种效率很差的多元素事件监听的方法就是, 你只需向它们的父节点绑定一次。
+	6，推迟到 $(window).load
+		jQuery对于开发者来说有一个很诱人的东西, 可以把任何东西挂到$(document).ready下。
+		尽管$(document).rady 确实很有用， 它可以在页面渲染时，其它元素还没下载完成就执行。
+		如果你发现你的页面一直是载入中的状态，很有可能就是$(document).ready函数引起的。
+		你可以通过将jQuery函数绑定到$(window).load 事件的方法来减少页面载入时的cpu使用率。
+		它会在所有的html(包括iframe)被下载完成后执行。
+		一些特效的功能，例如拖放, 视觉特效和动画, 预载入隐藏图像等等，都是适合这种技术的场合。	
+	7，压缩JavaScript
+		在线压缩地址: http://dean.edwards.name/packer/
+		压缩之前，请保证你的代码的规范性，否则可能失败，导致Js错误。
+	8，尽量使用ID代替Class。
+		前面性能优化已经说过，ID选择器的速度是最快的。所以在HTML代码中，能使用ID的尽量使用ID来代替class。
+	9，给选择器一个上下文
+		jQuery选择器中有一个这样的选择器，它能指定上下文。
+		jQuery( expression, context );
+		通过它，能缩小选择器在DOM中搜索的范围，达到节省时间，提高效率。
+		普通方式：
+		$('.myDiv')
+		改进方式：
+		$('.myDiv' , $("#listItem") )
+	10，慎用 .live()方法（应该说尽量不要使用）
+		这是jQuery1.3.1版本之后增加的方法，这个方法的功能就是为 新增的DOM元素 动态绑定事件。
+		但对于效率来说，这个方法比较占用资源。所以请尽量不要使用它。
+4. jquery插件实现的方法有哪些?
+5. DOM对象如何转为jquery对象?
+6. jquery对象如何转为dom对象?
+7. zepto是什么，jquery中的哪些方法不能在zepto中使用?
+8. jquery是否支持amd规范？当作为AMD模块运行时，模块名是什么?
+9. 如何解决jquery, prototype两个框架共存，以及$冲突的问题?
+10. 如何使用jquery切换样式表?
+11. 请列举javascript在IE和W3C浏览器上的兼容差异?
+12. IE与ff的js兼容性都有什么?
+13. 请列举你知道浏览器内核?
+14. 请列举出你见过的浏览器兼容性问题，如何解决?
+15. 什么是浏览器模式，有几种?
+16. 哪些属性是ff中有，而ie中没有的，请至少写出三种?
+17. 如何清除图片下方出现的几个像素的空白间隙?
+18. 请写出兼容所有浏览器的清除浮动的代码?
+19. 写出ie和非ie浏览器条件注释写法?
+20. 什么是浏览器的标准模式和怪异模式?
+21. use strict是什么意思?
+22. web脚本开发环境用什么工具？调试用什么？你在开发中如何来管理css, js, html,图片?
+23. 前端开发如何做优化?
+24. 请列举出提高网页加载速度的方法和技巧?
