@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<style type="text/css">
+		#container{
+			width:400px;
+			margin-top:20px;
+		}
+		*{
+			padding: 0;
+			margin: 0 auto;
+		}
+		#denglu{
+			margin-left: 140px;
+			height: 40px;
+		}
+		input{
+			width:99%;
+			height: 30px;
+		}
+		#header{
+			height:40px;
+		}
+	</style>
+  
+  </head>
+  <body>
+     <div class="panel panel-primary" id="container">
+          <div class="panel-heading" id="header">
+              <span>Login</span>
+          </div>
+          <div class="panel-body">
+              <p>用户名：</p>
+              <p><input type="text" /></p>
+              <div class="alert alert-warning">用户名不能为空！我是警告框</div>
+              <p>密码：</p>
+              <p><input type="text" /></p>
+              <span class="text-info">忘记密码？</span><span class="bg-primary" id="denglu">登录</span>
+              
+          </div>
+      </div>
+   
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

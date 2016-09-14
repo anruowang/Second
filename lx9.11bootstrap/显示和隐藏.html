@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+      div[class*="col-"]{
+        background:pink;
+        border:1px solid red;
+        color:#fff;
+        min-height: 40px;
+        /*最小高度为40，如果内容撑开的高度大于40，就由内容决定*/
+      }
+    </style>
+  </head>
+  <body>
+   <!--  响应式布局的工具：针对不同的设备展示或隐藏内容
+        lg  md  sm  xs    block   inline-block   inline
+        visible-xx-xx  显示
+        hidden-xx  lg md  sm  xs --> 
+    <div class="container-fluid">
+        <!-- lg>1200  md>992  sm>768   xs<768 -->
+        <div class="row">
+            <!-- 当lg的时候，显示 -->
+            <div class="col-lg-4 visible-lg-block">visible-lg-block</div>
+                <!-- md的时候隐藏，其余的时候显示 -->
+            <div class="col-lg-4 hidden-md">col-lg-4</div>
+        </div>
+       
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

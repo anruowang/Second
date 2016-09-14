@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+      div[class*="col-"]{
+        background:pink;
+        border:1px solid red;
+        color:#fff;
+        height: 40px;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 栅栏系统，bootstrap默认系统分为12栏，会自动适应 -->
+    <!-- 首先，定义一个容器 -->
+    <!-- 流体布局 -->
+    
+    <!-- 固定布局，但是这个固定并不是真正的固定，会根据屏幕分辨率的大小，去改变大小 -->
+    <div class="container">
+        <!-- lg>1200  md>992  sm>768   xs<768 -->
+        <div class="row">
+            <!-- 栏   屏幕大小  占了4栏 -->
+            <div class="col-lg-4">col-lg-4</div>
+            <div class="col-lg-4">col-lg-4</div>
+            <div class="col-lg-4">col-lg-4</div>
+        </div>
+        <div class="row">
+            <!-- 栏   屏幕大小  占了4栏 -->
+            <div class="col-md-3">col-md-3</div>
+            <div class="col-md-4">col-md-4</div>
+            <div class="col-md-5">col-md-5</div>
+        </div>
+        <div class="row">
+            <!-- 栏   屏幕大小  占了4栏 -->
+            <div class="col-sm-3">col-sm-3</div>
+            <div class="col-sm-4">col-sm-4</div>
+            <div class="col-sm-5">col-sm-5</div>
+        </div>
+        <div class="row">
+            <!-- 栏   屏幕大小  占了4栏 -->
+            <div class="col-xs-3">col-xs-3</div>
+            <div class="col-xs-4">col-xs-4</div>
+            <div class="col-xs-5">col-xs-5</div>
+        </div>
+        <!-- 可以一次性定义多个class -->
+         <div class="row">
+            <!-- 栏   屏幕大小  占了4栏 -->
+            <div class="col-xs-2 col-md-3 col-lg-4">col-xs-2 col-md-3 col-lg-4</div>
+            <div class="col-xs-4 col-md-4 col-lg-4">col-xs-2 col-md-3 col-lg-4</div>
+            <div class="col-xs-6 col-md-5 col-lg-4">col-xs-2 col-md-3 col-lg-4</div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>

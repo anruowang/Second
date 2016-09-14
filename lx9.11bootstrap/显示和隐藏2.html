@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+    <style type="text/css">
+      .tip1{
+        width: 30px;
+        height: 300px;
+        background: blue;
+      }
+      .tip2{
+        width: 30px;
+        height: 100px;
+        background: pink;
+      }
+      body{
+        height: 2000px;
+      }
+    </style>
+  </head>
+  <body>
+   <!--  响应式布局的工具：针对不同的设备展示或隐藏内容
+        lg  md  sm  xs    block   inline-block   inline
+        visible-xx-xx  显示
+        hidden-xx  lg md  sm  xs --> 
+    <div class="container-fluid">
+        <div class="row"><!-- pull-right 右浮动   affix 定位 -->
+            <!-- <div class="tip1 visible-lg-block pull-right"></div>
+            <div class="tip2 hidden-lg pull-rigth pull-right"></div> -->
+            <div class="tip1 visible-lg-block affix"></div>
+            <div class="tip2 hidden-lg  affix"></div>
+        </div>
+       <div>aaaaaaaaaaaaa</div>
+    </div>
+    <div class="row">
+        <!-- 打印的时候显示  平时隐藏 -->
+        <div class="visible-print-block">bbbbbbbbbb</div>
+        <!-- 打印的时候隐藏 平时显示 -->
+        <div class="hidden-print">ccccccccccccc</div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
