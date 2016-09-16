@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- 向下打开菜单 -->
+        <div class="col-lg-4">
+          <div class="dropdown  open">
+          <!-- 按钮部分                          js部分，用来做交互，不可更改-->
+          <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+            <!-- 这个值，不能更改 -->
+            Dropdown 
+            <span class="caret"></span>
+          </button>
+          <!-- 下拉菜单部分   这一部分专门针对特殊人群 -->
+          <ul class="dropdown-menu" style="width: 360px;">
+            <li class="text-center"><a href="#">Action</a></li>
+            <li class="text-center"><a href="#">Anther action</a></li>
+            <li class="text-center"><a href="#">Something else here</a></li>
+            <li class="text-center"><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <!-- 向下打开菜单  默认打开菜单 -->
+        <div class="dropdown open pull-right">
+          <!-- 按钮部分                          js部分，用来做交互，不可更改-->
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <!-- 这个值，不能更改 -->
+            Dropdown 
+            <span class="caret"></span>
+          </button>
+          <!-- 下拉菜单部分   这一部分专门针对特殊人群 -->
+          <ul class="dropdown-menu">
+            <li class="dropdown-header">第一部分</li>
+            <li class="active"><a href="#">Action</a></li>
+            <li><a href="#">Anther action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+            <!-- 分割线 -->
+            <li class="divider"></li>
+            <li class="dropdown-header">第二部分</li>
+            <li class="disabled"><a href="#">Action</a></li>
+            <li><a href="#">Anther action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <!-- 向下打开菜单  默认打开菜单 -->
+        <div class="dropdown open">
+          <!-- 按钮部分                          js部分，用来做交互，不可更改-->
+          <button class="btn btn-default btn-block dropdown-toggle" type="button" data-toggle="dropdown">
+            <!-- 这个值，不能更改 -->
+            Dropdown 
+            <span class="caret"></span>
+          </button>
+          <!-- 下拉菜单部分   这一部分专门针对特殊人群 -->
+          <ul class="dropdown-menu dropdown-menu-right">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Anther action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
