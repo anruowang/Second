@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+  <head>
+    <meta charset="utf-8">
+    <!-- 使用最高级别的可用模式的显示内容 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 移动端的视窗大小和我们的是同一个尺寸 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap 101 Template</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      .mybtnStyle .dropdown-menu img{
+        margin:5px;
+      }
+      .mybtnStyle .dropdown-menu{
+        -webkit-animation:start 0.5s linear;
+      }
+      @-webkit-keyframes start{
+        0%{
+          opcaity:0;
+          -webkit-transform:translateY(-20px);
+        }
+        100%{
+          opacity:1;
+          -webkit-transform:translateX(0px);
+        }
+      }
+    </style>
+  
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <!-- 向下打开菜单 -->
+      
+          <div class="dropdown  mybtnStyle">
+          <!-- 按钮部分                          js部分，用来做交互，不可更改-->
+          <button class="btn btn-default dropdown-toggle" type="button" data-toggle="dropdown">
+            <!-- 这个值，不能更改 -->
+            Plugins 
+            <span class="caret"></span>
+          </button>
+          <!-- 下拉菜单部分   这一部分专门针对特殊人群 -->
+          <ul class="dropdown-menu">
+            <li><a href="#"><img src="icon-alt.png" width="16" height="16" />Action</a></li>
+            <li><a href="#"><img src="icon-alt.png" width="16" height="16" />Action</a></li>
+            <li><a href="#"><img src="icon-alt.png" width="16" height="16" />Action</a></li>
+            <li><a href="#"><img src="icon-alt.png" width="16" height="16" />Action</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <!-- <script src="http://cdn.bootcss.com/jquery/1.11.1/jquery.min.js"></script> -->
+    <script type="text/javascript" src="js/jquery-2.0.3.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.js"></script>
+    <script type="text/javascript">
+      $(".drop-toggle").on("mouseover",function(){
+        alert(1);
+      });
+      //判断，平台的判断 mobile
+      alert(window.navigator.userAgent);
+      if(window.navigator.userAgent.toLowerCase().indexOf("mobile")==-1){
+        var timer=null;
+        //pc端
+        $(".dropdown-toggle").hover(function(){
+          clearTimeout(timer);
+          $(".dropdown").addClass("open");
+        },function(){
+          timer=setTimeout(function(){
+            $(".dropdown").removeClass("open");
+          },100);
+        });
+
+        //当菜单移入的时候，清除延迟器
+        $(".dropdown-menu").hover(function(){
+          clearTimeout(timer);
+        },function(){
+          timer=setTimeout(function(){
+            $(".dropdown").removeClass("open");
+          },100);
+        });
+      }else{
+        //移动端
+      }
+    </script>
+  </body>
+</html>
